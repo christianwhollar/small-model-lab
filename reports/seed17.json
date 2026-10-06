@@ -1,0 +1,4530 @@
+{
+  "protocol": "synthetic-ticket-language-v1",
+  "seed": 17,
+  "steps_per_stage": 150,
+  "scope": "Tiny causal language model on a closed synthetic vocabulary. Scores do not establish general language or financial-domain competence. Test field orders are absent from training. Quantization compresses stored weights; execution dequantizes to float32 and may be slower.",
+  "environment": {
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "torch": "2.14.1",
+    "threads": 2
+  },
+  "data": {
+    "train": {
+      "count": 320,
+      "sha256": "b9b00dad7e5a753f7d277b23c697545153c3c32cca2033ffa56977f329cdb1cf"
+    },
+    "validation": {
+      "count": 80,
+      "sha256": "f6d63fe123e9e2fa602b5ecb61de773abb32e5389768228792818572d13dad56"
+    },
+    "test": {
+      "count": 160,
+      "sha256": "1df236ade1a37d5ddd72e1245273bb42fb201e7f7aaec2a4fe13a3ab0afb2854"
+    }
+  },
+  "parameters": {
+    "base": 74393,
+    "adapter_trainable": 13000,
+    "student": 12281
+  },
+  "training_wall_seconds": 1.502473332977388,
+  "learning_curves": {
+    "pretraining": [
+      {
+        "step": 1,
+        "loss": 3.3657150268554688
+      },
+      {
+        "step": 25,
+        "loss": 0.32281672954559326
+      },
+      {
+        "step": 50,
+        "loss": 0.31137582659721375
+      },
+      {
+        "step": 75,
+        "loss": 0.2975257933139801
+      },
+      {
+        "step": 100,
+        "loss": 0.3037976026535034
+      },
+      {
+        "step": 125,
+        "loss": 0.32014280557632446
+      },
+      {
+        "step": 150,
+        "loss": 0.32418331503868103
+      }
+    ],
+    "lora": [
+      {
+        "step": 1,
+        "loss": 5.470503330230713
+      },
+      {
+        "step": 25,
+        "loss": 1.568285346031189
+      },
+      {
+        "step": 50,
+        "loss": 1.3397035598754883
+      },
+      {
+        "step": 75,
+        "loss": 1.0725585222244263
+      },
+      {
+        "step": 100,
+        "loss": 0.4136054813861847
+      },
+      {
+        "step": 125,
+        "loss": 0.21758879721164703
+      },
+      {
+        "step": 150,
+        "loss": 0.13915382325649261
+      }
+    ],
+    "distillation": [
+      {
+        "step": 1,
+        "loss": 4.378961563110352
+      },
+      {
+        "step": 25,
+        "loss": 1.4857990741729736
+      },
+      {
+        "step": 50,
+        "loss": 0.9684008359909058
+      },
+      {
+        "step": 75,
+        "loss": 0.6771422624588013
+      },
+      {
+        "step": 100,
+        "loss": 0.172901451587677
+      },
+      {
+        "step": 125,
+        "loss": 0.1266326606273651
+      },
+      {
+        "step": 150,
+        "loss": 0.11913765221834183
+      }
+    ]
+  },
+  "validation_teacher": {
+    "accuracy": 0.6625000238418579,
+    "target_token_nll": 1.1977198123931885,
+    "coverage_at_0_8": 0.9750000238418579,
+    "accuracy_at_0_8": 0.6794871687889099,
+    "state_dict_bytes": 364627,
+    "p50_forward_ms": 0.26762549532577395,
+    "p95_forward_ms": 0.2960453392006457,
+    "per_class_accuracy": {
+      "matched": 1.0,
+      "quantity": 0.6499999761581421,
+      "settlement": 0.0,
+      "escalate": 1.0
+    },
+    "predictions": [
+      {
+        "id": "validation-17-0",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9581571221351624
+      },
+      {
+        "id": "validation-17-1",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9593260884284973
+      },
+      {
+        "id": "validation-17-2",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9605485796928406
+      },
+      {
+        "id": "validation-17-3",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9284300804138184
+      },
+      {
+        "id": "validation-17-4",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9573283791542053
+      },
+      {
+        "id": "validation-17-5",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9593260884284973
+      },
+      {
+        "id": "validation-17-6",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9443213939666748
+      },
+      {
+        "id": "validation-17-7",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9079036116600037
+      },
+      {
+        "id": "validation-17-8",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9573283791542053
+      },
+      {
+        "id": "validation-17-9",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9602867364883423
+      },
+      {
+        "id": "validation-17-10",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9443213939666748
+      },
+      {
+        "id": "validation-17-11",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9158958792686462
+      },
+      {
+        "id": "validation-17-12",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9581571221351624
+      },
+      {
+        "id": "validation-17-13",
+        "truth": "quantity",
+        "predicted": "settlement",
+        "confidence": 0.7621785402297974
+      },
+      {
+        "id": "validation-17-14",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9627106189727783
+      },
+      {
+        "id": "validation-17-15",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9209345579147339
+      },
+      {
+        "id": "validation-17-16",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9573283791542053
+      },
+      {
+        "id": "validation-17-17",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9602867364883423
+      },
+      {
+        "id": "validation-17-18",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9627106189727783
+      },
+      {
+        "id": "validation-17-19",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9284300804138184
+      },
+      {
+        "id": "validation-17-20",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9573283791542053
+      },
+      {
+        "id": "validation-17-21",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9602867364883423
+      },
+      {
+        "id": "validation-17-22",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9605485796928406
+      },
+      {
+        "id": "validation-17-23",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9270574450492859
+      },
+      {
+        "id": "validation-17-24",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9573283791542053
+      },
+      {
+        "id": "validation-17-25",
+        "truth": "quantity",
+        "predicted": "settlement",
+        "confidence": 0.8763724565505981
+      },
+      {
+        "id": "validation-17-26",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9615063071250916
+      },
+      {
+        "id": "validation-17-27",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9209442734718323
+      },
+      {
+        "id": "validation-17-28",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9599098563194275
+      },
+      {
+        "id": "validation-17-29",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9622053503990173
+      },
+      {
+        "id": "validation-17-30",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9605485796928406
+      },
+      {
+        "id": "validation-17-31",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9267402291297913
+      },
+      {
+        "id": "validation-17-32",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9599098563194275
+      },
+      {
+        "id": "validation-17-33",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9593260884284973
+      },
+      {
+        "id": "validation-17-34",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9627106189727783
+      },
+      {
+        "id": "validation-17-35",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.915697455406189
+      },
+      {
+        "id": "validation-17-36",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9599098563194275
+      },
+      {
+        "id": "validation-17-37",
+        "truth": "quantity",
+        "predicted": "settlement",
+        "confidence": 0.8763724565505981
+      },
+      {
+        "id": "validation-17-38",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9615063071250916
+      },
+      {
+        "id": "validation-17-39",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9267402291297913
+      },
+      {
+        "id": "validation-17-40",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9573283791542053
+      },
+      {
+        "id": "validation-17-41",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9602867364883423
+      },
+      {
+        "id": "validation-17-42",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9627106189727783
+      },
+      {
+        "id": "validation-17-43",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9162580370903015
+      },
+      {
+        "id": "validation-17-44",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9176347851753235
+      },
+      {
+        "id": "validation-17-45",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9622053503990173
+      },
+      {
+        "id": "validation-17-46",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9615063071250916
+      },
+      {
+        "id": "validation-17-47",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9272579550743103
+      },
+      {
+        "id": "validation-17-48",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9599098563194275
+      },
+      {
+        "id": "validation-17-49",
+        "truth": "quantity",
+        "predicted": "settlement",
+        "confidence": 0.8832753300666809
+      },
+      {
+        "id": "validation-17-50",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9443213939666748
+      },
+      {
+        "id": "validation-17-51",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.915697455406189
+      },
+      {
+        "id": "validation-17-52",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9176347851753235
+      },
+      {
+        "id": "validation-17-53",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9593260884284973
+      },
+      {
+        "id": "validation-17-54",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9605485796928406
+      },
+      {
+        "id": "validation-17-55",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9079036116600037
+      },
+      {
+        "id": "validation-17-56",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9581571221351624
+      },
+      {
+        "id": "validation-17-57",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9602867364883423
+      },
+      {
+        "id": "validation-17-58",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9443213939666748
+      },
+      {
+        "id": "validation-17-59",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9270574450492859
+      },
+      {
+        "id": "validation-17-60",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9176347851753235
+      },
+      {
+        "id": "validation-17-61",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9593260884284973
+      },
+      {
+        "id": "validation-17-62",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9605485796928406
+      },
+      {
+        "id": "validation-17-63",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9284300804138184
+      },
+      {
+        "id": "validation-17-64",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9573283791542053
+      },
+      {
+        "id": "validation-17-65",
+        "truth": "quantity",
+        "predicted": "settlement",
+        "confidence": 0.8832753300666809
+      },
+      {
+        "id": "validation-17-66",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9615063071250916
+      },
+      {
+        "id": "validation-17-67",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9284300804138184
+      },
+      {
+        "id": "validation-17-68",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9573283791542053
+      },
+      {
+        "id": "validation-17-69",
+        "truth": "quantity",
+        "predicted": "settlement",
+        "confidence": 0.7621785402297974
+      },
+      {
+        "id": "validation-17-70",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9627106189727783
+      },
+      {
+        "id": "validation-17-71",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9267402291297913
+      },
+      {
+        "id": "validation-17-72",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9599098563194275
+      },
+      {
+        "id": "validation-17-73",
+        "truth": "quantity",
+        "predicted": "settlement",
+        "confidence": 0.8764329552650452
+      },
+      {
+        "id": "validation-17-74",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9627106189727783
+      },
+      {
+        "id": "validation-17-75",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9270574450492859
+      },
+      {
+        "id": "validation-17-76",
+        "truth": "matched",
+        "predicted": "matched",
+        "confidence": 0.9581571221351624
+      },
+      {
+        "id": "validation-17-77",
+        "truth": "quantity",
+        "predicted": "quantity",
+        "confidence": 0.9622053503990173
+      },
+      {
+        "id": "validation-17-78",
+        "truth": "settlement",
+        "predicted": "quantity",
+        "confidence": 0.9627106189727783
+      },
+      {
+        "id": "validation-17-79",
+        "truth": "escalate",
+        "predicted": "escalate",
+        "confidence": 0.9171276688575745
+      }
+    ]
+  },
+  "test": {
+    "base": {
+      "accuracy": 0.0,
+      "target_token_nll": 5.191232204437256,
+      "coverage_at_0_8": 0.0,
+      "accuracy_at_0_8": null,
+      "state_dict_bytes": 306889,
+      "p50_forward_ms": 0.1823960046749562,
+      "p95_forward_ms": 0.20250656234566122,
+      "per_class_accuracy": {
+        "matched": 0.0,
+        "quantity": 0.0,
+        "settlement": 0.0,
+        "escalate": 0.0
+      },
+      "predictions": [
+        {
+          "id": "test-17-0",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.27345454692840576
+        },
+        {
+          "id": "test-17-1",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.20041686296463013
+        },
+        {
+          "id": "test-17-2",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.16480448842048645
+        },
+        {
+          "id": "test-17-3",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.7414730787277222
+        },
+        {
+          "id": "test-17-4",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.255267858505249
+        },
+        {
+          "id": "test-17-5",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.14486552774906158
+        },
+        {
+          "id": "test-17-6",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.39168617129325867
+        },
+        {
+          "id": "test-17-7",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5203741192817688
+        },
+        {
+          "id": "test-17-8",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.40218961238861084
+        },
+        {
+          "id": "test-17-9",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.18328474462032318
+        },
+        {
+          "id": "test-17-10",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.16480448842048645
+        },
+        {
+          "id": "test-17-11",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.510597288608551
+        },
+        {
+          "id": "test-17-12",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.27345454692840576
+        },
+        {
+          "id": "test-17-13",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.47003528475761414
+        },
+        {
+          "id": "test-17-14",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.7439192533493042
+        },
+        {
+          "id": "test-17-15",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.4663180112838745
+        },
+        {
+          "id": "test-17-16",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.27345454692840576
+        },
+        {
+          "id": "test-17-17",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.14215131103992462
+        },
+        {
+          "id": "test-17-18",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.39168617129325867
+        },
+        {
+          "id": "test-17-19",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.7725092172622681
+        },
+        {
+          "id": "test-17-20",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.7793362736701965
+        },
+        {
+          "id": "test-17-21",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.15945382416248322
+        },
+        {
+          "id": "test-17-22",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.5105226635932922
+        },
+        {
+          "id": "test-17-23",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.16005460917949677
+        },
+        {
+          "id": "test-17-24",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.27345454692840576
+        },
+        {
+          "id": "test-17-25",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.18328474462032318
+        },
+        {
+          "id": "test-17-26",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.1371942013502121
+        },
+        {
+          "id": "test-17-27",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5307119488716125
+        },
+        {
+          "id": "test-17-28",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.4156924784183502
+        },
+        {
+          "id": "test-17-29",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.14215131103992462
+        },
+        {
+          "id": "test-17-30",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.1371942013502121
+        },
+        {
+          "id": "test-17-31",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5309549570083618
+        },
+        {
+          "id": "test-17-32",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.7793362736701965
+        },
+        {
+          "id": "test-17-33",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.15945382416248322
+        },
+        {
+          "id": "test-17-34",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.39168617129325867
+        },
+        {
+          "id": "test-17-35",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.7502464056015015
+        },
+        {
+          "id": "test-17-36",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.7340961694717407
+        },
+        {
+          "id": "test-17-37",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.13841557502746582
+        },
+        {
+          "id": "test-17-38",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.1371942013502121
+        },
+        {
+          "id": "test-17-39",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.14611952006816864
+        },
+        {
+          "id": "test-17-40",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.25915056467056274
+        },
+        {
+          "id": "test-17-41",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.13296879827976227
+        },
+        {
+          "id": "test-17-42",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.3741343319416046
+        },
+        {
+          "id": "test-17-43",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.17954809963703156
+        },
+        {
+          "id": "test-17-44",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.255267858505249
+        },
+        {
+          "id": "test-17-45",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.1805596649646759
+        },
+        {
+          "id": "test-17-46",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.14330388605594635
+        },
+        {
+          "id": "test-17-47",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5113147497177124
+        },
+        {
+          "id": "test-17-48",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.255267858505249
+        },
+        {
+          "id": "test-17-49",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.14486552774906158
+        },
+        {
+          "id": "test-17-50",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.1371942013502121
+        },
+        {
+          "id": "test-17-51",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.510597288608551
+        },
+        {
+          "id": "test-17-52",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.40218961238861084
+        },
+        {
+          "id": "test-17-53",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.766681432723999
+        },
+        {
+          "id": "test-17-54",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.16480448842048645
+        },
+        {
+          "id": "test-17-55",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.33022573590278625
+        },
+        {
+          "id": "test-17-56",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.23487527668476105
+        },
+        {
+          "id": "test-17-57",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.7789391279220581
+        },
+        {
+          "id": "test-17-58",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.39168617129325867
+        },
+        {
+          "id": "test-17-59",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5203741192817688
+        },
+        {
+          "id": "test-17-60",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.40218961238861084
+        },
+        {
+          "id": "test-17-61",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.20041686296463013
+        },
+        {
+          "id": "test-17-62",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.3741343319416046
+        },
+        {
+          "id": "test-17-63",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.4943281412124634
+        },
+        {
+          "id": "test-17-64",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.7793362736701965
+        },
+        {
+          "id": "test-17-65",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.13296879827976227
+        },
+        {
+          "id": "test-17-66",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.14330388605594635
+        },
+        {
+          "id": "test-17-67",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5863251686096191
+        },
+        {
+          "id": "test-17-68",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.7340961694717407
+        },
+        {
+          "id": "test-17-69",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.18328474462032318
+        },
+        {
+          "id": "test-17-70",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.5105226635932922
+        },
+        {
+          "id": "test-17-71",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.4916839897632599
+        },
+        {
+          "id": "test-17-72",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.27345454692840576
+        },
+        {
+          "id": "test-17-73",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.16704384982585907
+        },
+        {
+          "id": "test-17-74",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.3741343319416046
+        },
+        {
+          "id": "test-17-75",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.22329705953598022
+        },
+        {
+          "id": "test-17-76",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.7340961694717407
+        },
+        {
+          "id": "test-17-77",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.13296879827976227
+        },
+        {
+          "id": "test-17-78",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.7439192533493042
+        },
+        {
+          "id": "test-17-79",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.510597288608551
+        },
+        {
+          "id": "test-17-80",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.23487527668476105
+        },
+        {
+          "id": "test-17-81",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.14486552774906158
+        },
+        {
+          "id": "test-17-82",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.1371942013502121
+        },
+        {
+          "id": "test-17-83",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.7892434597015381
+        },
+        {
+          "id": "test-17-84",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.40218961238861084
+        },
+        {
+          "id": "test-17-85",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.16704384982585907
+        },
+        {
+          "id": "test-17-86",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.14330388605594635
+        },
+        {
+          "id": "test-17-87",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.16005460917949677
+        },
+        {
+          "id": "test-17-88",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.23487527668476105
+        },
+        {
+          "id": "test-17-89",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.13841557502746582
+        },
+        {
+          "id": "test-17-90",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.1371942013502121
+        },
+        {
+          "id": "test-17-91",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.7725092172622681
+        },
+        {
+          "id": "test-17-92",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.255267858505249
+        },
+        {
+          "id": "test-17-93",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.13296879827976227
+        },
+        {
+          "id": "test-17-94",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.5105226635932922
+        },
+        {
+          "id": "test-17-95",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5113147497177124
+        },
+        {
+          "id": "test-17-96",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.4156924784183502
+        },
+        {
+          "id": "test-17-97",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.14486552774906158
+        },
+        {
+          "id": "test-17-98",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.3741343319416046
+        },
+        {
+          "id": "test-17-99",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.17413321137428284
+        },
+        {
+          "id": "test-17-100",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.255267858505249
+        },
+        {
+          "id": "test-17-101",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.14272575080394745
+        },
+        {
+          "id": "test-17-102",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.14330388605594635
+        },
+        {
+          "id": "test-17-103",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.37067100405693054
+        },
+        {
+          "id": "test-17-104",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.23487527668476105
+        },
+        {
+          "id": "test-17-105",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.7789391279220581
+        },
+        {
+          "id": "test-17-106",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.3741343319416046
+        },
+        {
+          "id": "test-17-107",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.17954809963703156
+        },
+        {
+          "id": "test-17-108",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.40218961238861084
+        },
+        {
+          "id": "test-17-109",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.18328474462032318
+        },
+        {
+          "id": "test-17-110",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.14330388605594635
+        },
+        {
+          "id": "test-17-111",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5746170878410339
+        },
+        {
+          "id": "test-17-112",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.25915056467056274
+        },
+        {
+          "id": "test-17-113",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.15111051499843597
+        },
+        {
+          "id": "test-17-114",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.16480448842048645
+        },
+        {
+          "id": "test-17-115",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.22329705953598022
+        },
+        {
+          "id": "test-17-116",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.27345454692840576
+        },
+        {
+          "id": "test-17-117",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.47003528475761414
+        },
+        {
+          "id": "test-17-118",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.26770973205566406
+        },
+        {
+          "id": "test-17-119",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.22329705953598022
+        },
+        {
+          "id": "test-17-120",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.255267858505249
+        },
+        {
+          "id": "test-17-121",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.16704384982585907
+        },
+        {
+          "id": "test-17-122",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.26770973205566406
+        },
+        {
+          "id": "test-17-123",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.16005460917949677
+        },
+        {
+          "id": "test-17-124",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.4156924784183502
+        },
+        {
+          "id": "test-17-125",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.7789391279220581
+        },
+        {
+          "id": "test-17-126",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.14330388605594635
+        },
+        {
+          "id": "test-17-127",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.14611952006816864
+        },
+        {
+          "id": "test-17-128",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.27345454692840576
+        },
+        {
+          "id": "test-17-129",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.47003528475761414
+        },
+        {
+          "id": "test-17-130",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.7439192533493042
+        },
+        {
+          "id": "test-17-131",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5309549570083618
+        },
+        {
+          "id": "test-17-132",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.4156924784183502
+        },
+        {
+          "id": "test-17-133",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.15945382416248322
+        },
+        {
+          "id": "test-17-134",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.16480448842048645
+        },
+        {
+          "id": "test-17-135",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.4045911431312561
+        },
+        {
+          "id": "test-17-136",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.27345454692840576
+        },
+        {
+          "id": "test-17-137",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.7663296461105347
+        },
+        {
+          "id": "test-17-138",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.1371942013502121
+        },
+        {
+          "id": "test-17-139",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.7414730787277222
+        },
+        {
+          "id": "test-17-140",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.23487527668476105
+        },
+        {
+          "id": "test-17-141",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.766681432723999
+        },
+        {
+          "id": "test-17-142",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.3741343319416046
+        },
+        {
+          "id": "test-17-143",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.2102780044078827
+        },
+        {
+          "id": "test-17-144",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.7340961694717407
+        },
+        {
+          "id": "test-17-145",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.1805596649646759
+        },
+        {
+          "id": "test-17-146",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.14330388605594635
+        },
+        {
+          "id": "test-17-147",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5203741192817688
+        },
+        {
+          "id": "test-17-148",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.27345454692840576
+        },
+        {
+          "id": "test-17-149",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.14486552774906158
+        },
+        {
+          "id": "test-17-150",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.7439192533493042
+        },
+        {
+          "id": "test-17-151",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.2102780044078827
+        },
+        {
+          "id": "test-17-152",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.25915056467056274
+        },
+        {
+          "id": "test-17-153",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.14486552774906158
+        },
+        {
+          "id": "test-17-154",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.16480448842048645
+        },
+        {
+          "id": "test-17-155",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5203741192817688
+        },
+        {
+          "id": "test-17-156",
+          "truth": "matched",
+          "predicted": "invalid_token",
+          "confidence": 0.7793362736701965
+        },
+        {
+          "id": "test-17-157",
+          "truth": "quantity",
+          "predicted": "invalid_token",
+          "confidence": 0.15945382416248322
+        },
+        {
+          "id": "test-17-158",
+          "truth": "settlement",
+          "predicted": "invalid_token",
+          "confidence": 0.5105226635932922
+        },
+        {
+          "id": "test-17-159",
+          "truth": "escalate",
+          "predicted": "invalid_token",
+          "confidence": 0.5203741192817688
+        }
+      ]
+    },
+    "lora_teacher": {
+      "accuracy": 0.5,
+      "target_token_nll": 1.3851523399353027,
+      "coverage_at_0_8": 0.800000011920929,
+      "accuracy_at_0_8": 0.625,
+      "state_dict_bytes": 364627,
+      "p50_forward_ms": 0.2672289847396314,
+      "p95_forward_ms": 0.2983517391839996,
+      "per_class_accuracy": {
+        "matched": 0.0,
+        "quantity": 1.0,
+        "settlement": 0.0,
+        "escalate": 1.0
+      },
+      "predictions": [
+        {
+          "id": "test-17-0",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.49925023317337036
+        },
+        {
+          "id": "test-17-1",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9192909598350525
+        },
+        {
+          "id": "test-17-2",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9432603716850281
+        },
+        {
+          "id": "test-17-3",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8775928616523743
+        },
+        {
+          "id": "test-17-4",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.8136982321739197
+        },
+        {
+          "id": "test-17-5",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9519718885421753
+        },
+        {
+          "id": "test-17-6",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7972196340560913
+        },
+        {
+          "id": "test-17-7",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8743764758110046
+        },
+        {
+          "id": "test-17-8",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.44879597425460815
+        },
+        {
+          "id": "test-17-9",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9281449317932129
+        },
+        {
+          "id": "test-17-10",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9432603716850281
+        },
+        {
+          "id": "test-17-11",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9204670190811157
+        },
+        {
+          "id": "test-17-12",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.49925023317337036
+        },
+        {
+          "id": "test-17-13",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9199724793434143
+        },
+        {
+          "id": "test-17-14",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8806384801864624
+        },
+        {
+          "id": "test-17-15",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9174888730049133
+        },
+        {
+          "id": "test-17-16",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.49925023317337036
+        },
+        {
+          "id": "test-17-17",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9514816999435425
+        },
+        {
+          "id": "test-17-18",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7972196340560913
+        },
+        {
+          "id": "test-17-19",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8529205322265625
+        },
+        {
+          "id": "test-17-20",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.5792528986930847
+        },
+        {
+          "id": "test-17-21",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8301870822906494
+        },
+        {
+          "id": "test-17-22",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9112343192100525
+        },
+        {
+          "id": "test-17-23",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9088711738586426
+        },
+        {
+          "id": "test-17-24",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.49925023317337036
+        },
+        {
+          "id": "test-17-25",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9281449317932129
+        },
+        {
+          "id": "test-17-26",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9469456672668457
+        },
+        {
+          "id": "test-17-27",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.916111946105957
+        },
+        {
+          "id": "test-17-28",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.7439788579940796
+        },
+        {
+          "id": "test-17-29",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9514816999435425
+        },
+        {
+          "id": "test-17-30",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9469456672668457
+        },
+        {
+          "id": "test-17-31",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9148333072662354
+        },
+        {
+          "id": "test-17-32",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.5792528986930847
+        },
+        {
+          "id": "test-17-33",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8301870822906494
+        },
+        {
+          "id": "test-17-34",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7972196340560913
+        },
+        {
+          "id": "test-17-35",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8582457304000854
+        },
+        {
+          "id": "test-17-36",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.7225451469421387
+        },
+        {
+          "id": "test-17-37",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9507958292961121
+        },
+        {
+          "id": "test-17-38",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9469456672668457
+        },
+        {
+          "id": "test-17-39",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.909504771232605
+        },
+        {
+          "id": "test-17-40",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.8600403070449829
+        },
+        {
+          "id": "test-17-41",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9089691638946533
+        },
+        {
+          "id": "test-17-42",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8364248871803284
+        },
+        {
+          "id": "test-17-43",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9112521409988403
+        },
+        {
+          "id": "test-17-44",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.8136982321739197
+        },
+        {
+          "id": "test-17-45",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9531702399253845
+        },
+        {
+          "id": "test-17-46",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9481393694877625
+        },
+        {
+          "id": "test-17-47",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9201068878173828
+        },
+        {
+          "id": "test-17-48",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.8136982321739197
+        },
+        {
+          "id": "test-17-49",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9519718885421753
+        },
+        {
+          "id": "test-17-50",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9469456672668457
+        },
+        {
+          "id": "test-17-51",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9204670190811157
+        },
+        {
+          "id": "test-17-52",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.44879597425460815
+        },
+        {
+          "id": "test-17-53",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.873513400554657
+        },
+        {
+          "id": "test-17-54",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9432603716850281
+        },
+        {
+          "id": "test-17-55",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.897781491279602
+        },
+        {
+          "id": "test-17-56",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.823172926902771
+        },
+        {
+          "id": "test-17-57",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.926893413066864
+        },
+        {
+          "id": "test-17-58",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7972196340560913
+        },
+        {
+          "id": "test-17-59",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8743764758110046
+        },
+        {
+          "id": "test-17-60",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.44879597425460815
+        },
+        {
+          "id": "test-17-61",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9192909598350525
+        },
+        {
+          "id": "test-17-62",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8364248871803284
+        },
+        {
+          "id": "test-17-63",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9205073118209839
+        },
+        {
+          "id": "test-17-64",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.5792528986930847
+        },
+        {
+          "id": "test-17-65",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9089691638946533
+        },
+        {
+          "id": "test-17-66",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9481393694877625
+        },
+        {
+          "id": "test-17-67",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.905704140663147
+        },
+        {
+          "id": "test-17-68",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.7225451469421387
+        },
+        {
+          "id": "test-17-69",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9281449317932129
+        },
+        {
+          "id": "test-17-70",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9112343192100525
+        },
+        {
+          "id": "test-17-71",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9178687334060669
+        },
+        {
+          "id": "test-17-72",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.49925023317337036
+        },
+        {
+          "id": "test-17-73",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9534255862236023
+        },
+        {
+          "id": "test-17-74",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8364248871803284
+        },
+        {
+          "id": "test-17-75",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9005684852600098
+        },
+        {
+          "id": "test-17-76",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.7225451469421387
+        },
+        {
+          "id": "test-17-77",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9089691638946533
+        },
+        {
+          "id": "test-17-78",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8806384801864624
+        },
+        {
+          "id": "test-17-79",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9204670190811157
+        },
+        {
+          "id": "test-17-80",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.823172926902771
+        },
+        {
+          "id": "test-17-81",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9519718885421753
+        },
+        {
+          "id": "test-17-82",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9469456672668457
+        },
+        {
+          "id": "test-17-83",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8376546502113342
+        },
+        {
+          "id": "test-17-84",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.44879597425460815
+        },
+        {
+          "id": "test-17-85",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9534255862236023
+        },
+        {
+          "id": "test-17-86",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9481393694877625
+        },
+        {
+          "id": "test-17-87",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9088711738586426
+        },
+        {
+          "id": "test-17-88",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.823172926902771
+        },
+        {
+          "id": "test-17-89",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9507958292961121
+        },
+        {
+          "id": "test-17-90",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9469456672668457
+        },
+        {
+          "id": "test-17-91",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8529205322265625
+        },
+        {
+          "id": "test-17-92",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.8136982321739197
+        },
+        {
+          "id": "test-17-93",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9089691638946533
+        },
+        {
+          "id": "test-17-94",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9112343192100525
+        },
+        {
+          "id": "test-17-95",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9201068878173828
+        },
+        {
+          "id": "test-17-96",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.7439788579940796
+        },
+        {
+          "id": "test-17-97",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9519718885421753
+        },
+        {
+          "id": "test-17-98",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8364248871803284
+        },
+        {
+          "id": "test-17-99",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9093099236488342
+        },
+        {
+          "id": "test-17-100",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.8136982321739197
+        },
+        {
+          "id": "test-17-101",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.949920654296875
+        },
+        {
+          "id": "test-17-102",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9481393694877625
+        },
+        {
+          "id": "test-17-103",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8996556401252747
+        },
+        {
+          "id": "test-17-104",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.823172926902771
+        },
+        {
+          "id": "test-17-105",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.926893413066864
+        },
+        {
+          "id": "test-17-106",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8364248871803284
+        },
+        {
+          "id": "test-17-107",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9112521409988403
+        },
+        {
+          "id": "test-17-108",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.44879597425460815
+        },
+        {
+          "id": "test-17-109",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9281449317932129
+        },
+        {
+          "id": "test-17-110",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9481393694877625
+        },
+        {
+          "id": "test-17-111",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9047307372093201
+        },
+        {
+          "id": "test-17-112",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.8600403070449829
+        },
+        {
+          "id": "test-17-113",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8254929184913635
+        },
+        {
+          "id": "test-17-114",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9432603716850281
+        },
+        {
+          "id": "test-17-115",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9005684852600098
+        },
+        {
+          "id": "test-17-116",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.49925023317337036
+        },
+        {
+          "id": "test-17-117",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9199724793434143
+        },
+        {
+          "id": "test-17-118",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7786017060279846
+        },
+        {
+          "id": "test-17-119",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9005684852600098
+        },
+        {
+          "id": "test-17-120",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.8136982321739197
+        },
+        {
+          "id": "test-17-121",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9534255862236023
+        },
+        {
+          "id": "test-17-122",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7786017060279846
+        },
+        {
+          "id": "test-17-123",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9088711738586426
+        },
+        {
+          "id": "test-17-124",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.7439788579940796
+        },
+        {
+          "id": "test-17-125",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.926893413066864
+        },
+        {
+          "id": "test-17-126",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9481393694877625
+        },
+        {
+          "id": "test-17-127",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.909504771232605
+        },
+        {
+          "id": "test-17-128",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.49925023317337036
+        },
+        {
+          "id": "test-17-129",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9199724793434143
+        },
+        {
+          "id": "test-17-130",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8806384801864624
+        },
+        {
+          "id": "test-17-131",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9148333072662354
+        },
+        {
+          "id": "test-17-132",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.7439788579940796
+        },
+        {
+          "id": "test-17-133",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8301870822906494
+        },
+        {
+          "id": "test-17-134",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9432603716850281
+        },
+        {
+          "id": "test-17-135",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9002635478973389
+        },
+        {
+          "id": "test-17-136",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.49925023317337036
+        },
+        {
+          "id": "test-17-137",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8374043703079224
+        },
+        {
+          "id": "test-17-138",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9469456672668457
+        },
+        {
+          "id": "test-17-139",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8775928616523743
+        },
+        {
+          "id": "test-17-140",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.823172926902771
+        },
+        {
+          "id": "test-17-141",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.873513400554657
+        },
+        {
+          "id": "test-17-142",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8364248871803284
+        },
+        {
+          "id": "test-17-143",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9109006524085999
+        },
+        {
+          "id": "test-17-144",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.7225451469421387
+        },
+        {
+          "id": "test-17-145",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9531702399253845
+        },
+        {
+          "id": "test-17-146",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9481393694877625
+        },
+        {
+          "id": "test-17-147",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8743764758110046
+        },
+        {
+          "id": "test-17-148",
+          "truth": "matched",
+          "predicted": "escalate",
+          "confidence": 0.49925023317337036
+        },
+        {
+          "id": "test-17-149",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9519718885421753
+        },
+        {
+          "id": "test-17-150",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8806384801864624
+        },
+        {
+          "id": "test-17-151",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9109006524085999
+        },
+        {
+          "id": "test-17-152",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.8600403070449829
+        },
+        {
+          "id": "test-17-153",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.9519718885421753
+        },
+        {
+          "id": "test-17-154",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9432603716850281
+        },
+        {
+          "id": "test-17-155",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8743764758110046
+        },
+        {
+          "id": "test-17-156",
+          "truth": "matched",
+          "predicted": "quantity",
+          "confidence": 0.5792528986930847
+        },
+        {
+          "id": "test-17-157",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8301870822906494
+        },
+        {
+          "id": "test-17-158",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.9112343192100525
+        },
+        {
+          "id": "test-17-159",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8743764758110046
+        }
+      ]
+    },
+    "student": {
+      "accuracy": 0.7562500238418579,
+      "target_token_nll": 0.6514067053794861,
+      "coverage_at_0_8": 0.8187500238418579,
+      "accuracy_at_0_8": 0.7709923386573792,
+      "state_dict_bytes": 54957,
+      "p50_forward_ms": 0.09370851330459118,
+      "p95_forward_ms": 0.10858736350201069,
+      "per_class_accuracy": {
+        "matched": 1.0,
+        "quantity": 0.625,
+        "settlement": 0.4000000059604645,
+        "escalate": 1.0
+      },
+      "predictions": [
+        {
+          "id": "test-17-0",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262046813964844
+        },
+        {
+          "id": "test-17-1",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5492281913757324
+        },
+        {
+          "id": "test-17-2",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869662344455719
+        },
+        {
+          "id": "test-17-3",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8888358473777771
+        },
+        {
+          "id": "test-17-4",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.907744824886322
+        },
+        {
+          "id": "test-17-5",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5505862832069397
+        },
+        {
+          "id": "test-17-6",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8686841130256653
+        },
+        {
+          "id": "test-17-7",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9364757537841797
+        },
+        {
+          "id": "test-17-8",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9265100359916687
+        },
+        {
+          "id": "test-17-9",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5565673112869263
+        },
+        {
+          "id": "test-17-10",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869662344455719
+        },
+        {
+          "id": "test-17-11",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9073687791824341
+        },
+        {
+          "id": "test-17-12",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262046813964844
+        },
+        {
+          "id": "test-17-13",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.6965187788009644
+        },
+        {
+          "id": "test-17-14",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8882139921188354
+        },
+        {
+          "id": "test-17-15",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.885327935218811
+        },
+        {
+          "id": "test-17-16",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262046813964844
+        },
+        {
+          "id": "test-17-17",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5571622252464294
+        },
+        {
+          "id": "test-17-18",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8686841130256653
+        },
+        {
+          "id": "test-17-19",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9279593825340271
+        },
+        {
+          "id": "test-17-20",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.936461329460144
+        },
+        {
+          "id": "test-17-21",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8920164108276367
+        },
+        {
+          "id": "test-17-22",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7210968732833862
+        },
+        {
+          "id": "test-17-23",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9479953646659851
+        },
+        {
+          "id": "test-17-24",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262046813964844
+        },
+        {
+          "id": "test-17-25",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5565673112869263
+        },
+        {
+          "id": "test-17-26",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8687392473220825
+        },
+        {
+          "id": "test-17-27",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9074090123176575
+        },
+        {
+          "id": "test-17-28",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262220859527588
+        },
+        {
+          "id": "test-17-29",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5571622252464294
+        },
+        {
+          "id": "test-17-30",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8687392473220825
+        },
+        {
+          "id": "test-17-31",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9074135422706604
+        },
+        {
+          "id": "test-17-32",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.936461329460144
+        },
+        {
+          "id": "test-17-33",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8920164108276367
+        },
+        {
+          "id": "test-17-34",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8686841130256653
+        },
+        {
+          "id": "test-17-35",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8644227981567383
+        },
+        {
+          "id": "test-17-36",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9406326413154602
+        },
+        {
+          "id": "test-17-37",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8425153493881226
+        },
+        {
+          "id": "test-17-38",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8687392473220825
+        },
+        {
+          "id": "test-17-39",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9480140805244446
+        },
+        {
+          "id": "test-17-40",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.907338559627533
+        },
+        {
+          "id": "test-17-41",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5531043410301208
+        },
+        {
+          "id": "test-17-42",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8692266345024109
+        },
+        {
+          "id": "test-17-43",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9413150548934937
+        },
+        {
+          "id": "test-17-44",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.907744824886322
+        },
+        {
+          "id": "test-17-45",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8425751328468323
+        },
+        {
+          "id": "test-17-46",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.871015727519989
+        },
+        {
+          "id": "test-17-47",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9073733687400818
+        },
+        {
+          "id": "test-17-48",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.907744824886322
+        },
+        {
+          "id": "test-17-49",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5505862832069397
+        },
+        {
+          "id": "test-17-50",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8687392473220825
+        },
+        {
+          "id": "test-17-51",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9073687791824341
+        },
+        {
+          "id": "test-17-52",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9265100359916687
+        },
+        {
+          "id": "test-17-53",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.7070759534835815
+        },
+        {
+          "id": "test-17-54",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869662344455719
+        },
+        {
+          "id": "test-17-55",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9479062557220459
+        },
+        {
+          "id": "test-17-56",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9073107838630676
+        },
+        {
+          "id": "test-17-57",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8811575174331665
+        },
+        {
+          "id": "test-17-58",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8686841130256653
+        },
+        {
+          "id": "test-17-59",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9364757537841797
+        },
+        {
+          "id": "test-17-60",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9265100359916687
+        },
+        {
+          "id": "test-17-61",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5492281913757324
+        },
+        {
+          "id": "test-17-62",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8692266345024109
+        },
+        {
+          "id": "test-17-63",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9073778986930847
+        },
+        {
+          "id": "test-17-64",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.936461329460144
+        },
+        {
+          "id": "test-17-65",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5531043410301208
+        },
+        {
+          "id": "test-17-66",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.871015727519989
+        },
+        {
+          "id": "test-17-67",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8852556347846985
+        },
+        {
+          "id": "test-17-68",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9406326413154602
+        },
+        {
+          "id": "test-17-69",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5565673112869263
+        },
+        {
+          "id": "test-17-70",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7210968732833862
+        },
+        {
+          "id": "test-17-71",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8853386640548706
+        },
+        {
+          "id": "test-17-72",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262046813964844
+        },
+        {
+          "id": "test-17-73",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8433061242103577
+        },
+        {
+          "id": "test-17-74",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8692266345024109
+        },
+        {
+          "id": "test-17-75",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9412999153137207
+        },
+        {
+          "id": "test-17-76",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9406326413154602
+        },
+        {
+          "id": "test-17-77",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5531043410301208
+        },
+        {
+          "id": "test-17-78",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8882139921188354
+        },
+        {
+          "id": "test-17-79",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9073687791824341
+        },
+        {
+          "id": "test-17-80",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9073107838630676
+        },
+        {
+          "id": "test-17-81",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5505862832069397
+        },
+        {
+          "id": "test-17-82",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8687392473220825
+        },
+        {
+          "id": "test-17-83",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.888972282409668
+        },
+        {
+          "id": "test-17-84",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9265100359916687
+        },
+        {
+          "id": "test-17-85",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8433061242103577
+        },
+        {
+          "id": "test-17-86",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.871015727519989
+        },
+        {
+          "id": "test-17-87",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9479953646659851
+        },
+        {
+          "id": "test-17-88",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9073107838630676
+        },
+        {
+          "id": "test-17-89",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8425153493881226
+        },
+        {
+          "id": "test-17-90",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8687392473220825
+        },
+        {
+          "id": "test-17-91",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9279593825340271
+        },
+        {
+          "id": "test-17-92",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.907744824886322
+        },
+        {
+          "id": "test-17-93",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5531043410301208
+        },
+        {
+          "id": "test-17-94",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7210968732833862
+        },
+        {
+          "id": "test-17-95",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9073733687400818
+        },
+        {
+          "id": "test-17-96",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262220859527588
+        },
+        {
+          "id": "test-17-97",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5505862832069397
+        },
+        {
+          "id": "test-17-98",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8692266345024109
+        },
+        {
+          "id": "test-17-99",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9479175806045532
+        },
+        {
+          "id": "test-17-100",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.907744824886322
+        },
+        {
+          "id": "test-17-101",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5539050102233887
+        },
+        {
+          "id": "test-17-102",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.871015727519989
+        },
+        {
+          "id": "test-17-103",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9414236545562744
+        },
+        {
+          "id": "test-17-104",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9073107838630676
+        },
+        {
+          "id": "test-17-105",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8811575174331665
+        },
+        {
+          "id": "test-17-106",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8692266345024109
+        },
+        {
+          "id": "test-17-107",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9413150548934937
+        },
+        {
+          "id": "test-17-108",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9265100359916687
+        },
+        {
+          "id": "test-17-109",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5565673112869263
+        },
+        {
+          "id": "test-17-110",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.871015727519989
+        },
+        {
+          "id": "test-17-111",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8852449059486389
+        },
+        {
+          "id": "test-17-112",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.907338559627533
+        },
+        {
+          "id": "test-17-113",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8929639458656311
+        },
+        {
+          "id": "test-17-114",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869662344455719
+        },
+        {
+          "id": "test-17-115",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9412999153137207
+        },
+        {
+          "id": "test-17-116",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262046813964844
+        },
+        {
+          "id": "test-17-117",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.6965187788009644
+        },
+        {
+          "id": "test-17-118",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8686387538909912
+        },
+        {
+          "id": "test-17-119",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9412999153137207
+        },
+        {
+          "id": "test-17-120",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.907744824886322
+        },
+        {
+          "id": "test-17-121",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8433061242103577
+        },
+        {
+          "id": "test-17-122",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8686387538909912
+        },
+        {
+          "id": "test-17-123",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9479953646659851
+        },
+        {
+          "id": "test-17-124",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262220859527588
+        },
+        {
+          "id": "test-17-125",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8811575174331665
+        },
+        {
+          "id": "test-17-126",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.871015727519989
+        },
+        {
+          "id": "test-17-127",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9480140805244446
+        },
+        {
+          "id": "test-17-128",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262046813964844
+        },
+        {
+          "id": "test-17-129",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.6965187788009644
+        },
+        {
+          "id": "test-17-130",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8882139921188354
+        },
+        {
+          "id": "test-17-131",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9074135422706604
+        },
+        {
+          "id": "test-17-132",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262220859527588
+        },
+        {
+          "id": "test-17-133",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8920164108276367
+        },
+        {
+          "id": "test-17-134",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869662344455719
+        },
+        {
+          "id": "test-17-135",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.941108763217926
+        },
+        {
+          "id": "test-17-136",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262046813964844
+        },
+        {
+          "id": "test-17-137",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.7212265133857727
+        },
+        {
+          "id": "test-17-138",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8687392473220825
+        },
+        {
+          "id": "test-17-139",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8888358473777771
+        },
+        {
+          "id": "test-17-140",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9073107838630676
+        },
+        {
+          "id": "test-17-141",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.7070759534835815
+        },
+        {
+          "id": "test-17-142",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8692266345024109
+        },
+        {
+          "id": "test-17-143",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9414387345314026
+        },
+        {
+          "id": "test-17-144",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9406326413154602
+        },
+        {
+          "id": "test-17-145",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8425751328468323
+        },
+        {
+          "id": "test-17-146",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.871015727519989
+        },
+        {
+          "id": "test-17-147",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9364757537841797
+        },
+        {
+          "id": "test-17-148",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9262046813964844
+        },
+        {
+          "id": "test-17-149",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5505862832069397
+        },
+        {
+          "id": "test-17-150",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8882139921188354
+        },
+        {
+          "id": "test-17-151",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9414387345314026
+        },
+        {
+          "id": "test-17-152",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.907338559627533
+        },
+        {
+          "id": "test-17-153",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5505862832069397
+        },
+        {
+          "id": "test-17-154",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869662344455719
+        },
+        {
+          "id": "test-17-155",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9364757537841797
+        },
+        {
+          "id": "test-17-156",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.936461329460144
+        },
+        {
+          "id": "test-17-157",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8920164108276367
+        },
+        {
+          "id": "test-17-158",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7210968732833862
+        },
+        {
+          "id": "test-17-159",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9364757537841797
+        }
+      ]
+    },
+    "int8_student": {
+      "accuracy": 0.7562500238418579,
+      "target_token_nll": 0.652320921421051,
+      "coverage_at_0_8": 0.8187500238418579,
+      "accuracy_at_0_8": 0.7709923386573792,
+      "state_dict_bytes": 30302,
+      "p50_forward_ms": 0.10970848961733282,
+      "p95_forward_ms": 0.11732727289199829,
+      "per_class_accuracy": {
+        "matched": 1.0,
+        "quantity": 0.625,
+        "settlement": 0.4000000059604645,
+        "escalate": 1.0
+      },
+      "predictions": [
+        {
+          "id": "test-17-0",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261666536331177
+        },
+        {
+          "id": "test-17-1",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5500231981277466
+        },
+        {
+          "id": "test-17-2",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8700858950614929
+        },
+        {
+          "id": "test-17-3",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8895825743675232
+        },
+        {
+          "id": "test-17-4",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9073417782783508
+        },
+        {
+          "id": "test-17-5",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5511427521705627
+        },
+        {
+          "id": "test-17-6",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8702145218849182
+        },
+        {
+          "id": "test-17-7",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9370887875556946
+        },
+        {
+          "id": "test-17-8",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.926473081111908
+        },
+        {
+          "id": "test-17-9",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5575661063194275
+        },
+        {
+          "id": "test-17-10",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8700858950614929
+        },
+        {
+          "id": "test-17-11",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9079626798629761
+        },
+        {
+          "id": "test-17-12",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261666536331177
+        },
+        {
+          "id": "test-17-13",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.6971743106842041
+        },
+        {
+          "id": "test-17-14",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8896788954734802
+        },
+        {
+          "id": "test-17-15",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8863816857337952
+        },
+        {
+          "id": "test-17-16",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261666536331177
+        },
+        {
+          "id": "test-17-17",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5578855276107788
+        },
+        {
+          "id": "test-17-18",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8702145218849182
+        },
+        {
+          "id": "test-17-19",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9286782145500183
+        },
+        {
+          "id": "test-17-20",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9365500807762146
+        },
+        {
+          "id": "test-17-21",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8928723335266113
+        },
+        {
+          "id": "test-17-22",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7227388620376587
+        },
+        {
+          "id": "test-17-23",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9485026597976685
+        },
+        {
+          "id": "test-17-24",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261666536331177
+        },
+        {
+          "id": "test-17-25",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5575661063194275
+        },
+        {
+          "id": "test-17-26",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869151771068573
+        },
+        {
+          "id": "test-17-27",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9080022573471069
+        },
+        {
+          "id": "test-17-28",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261844158172607
+        },
+        {
+          "id": "test-17-29",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5578855276107788
+        },
+        {
+          "id": "test-17-30",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869151771068573
+        },
+        {
+          "id": "test-17-31",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.908006489276886
+        },
+        {
+          "id": "test-17-32",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9365500807762146
+        },
+        {
+          "id": "test-17-33",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8928723335266113
+        },
+        {
+          "id": "test-17-34",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8702145218849182
+        },
+        {
+          "id": "test-17-35",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8657030463218689
+        },
+        {
+          "id": "test-17-36",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9407185912132263
+        },
+        {
+          "id": "test-17-37",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.843781054019928
+        },
+        {
+          "id": "test-17-38",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869151771068573
+        },
+        {
+          "id": "test-17-39",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9485203623771667
+        },
+        {
+          "id": "test-17-40",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9069317579269409
+        },
+        {
+          "id": "test-17-41",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5539981722831726
+        },
+        {
+          "id": "test-17-42",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8707531094551086
+        },
+        {
+          "id": "test-17-43",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9419047236442566
+        },
+        {
+          "id": "test-17-44",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9073417782783508
+        },
+        {
+          "id": "test-17-45",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8438412547111511
+        },
+        {
+          "id": "test-17-46",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8714610934257507
+        },
+        {
+          "id": "test-17-47",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9079672694206238
+        },
+        {
+          "id": "test-17-48",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9073417782783508
+        },
+        {
+          "id": "test-17-49",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5511427521705627
+        },
+        {
+          "id": "test-17-50",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869151771068573
+        },
+        {
+          "id": "test-17-51",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9079626798629761
+        },
+        {
+          "id": "test-17-52",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.926473081111908
+        },
+        {
+          "id": "test-17-53",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.7077338099479675
+        },
+        {
+          "id": "test-17-54",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8700858950614929
+        },
+        {
+          "id": "test-17-55",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9484142065048218
+        },
+        {
+          "id": "test-17-56",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9069032073020935
+        },
+        {
+          "id": "test-17-57",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8827211856842041
+        },
+        {
+          "id": "test-17-58",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8702145218849182
+        },
+        {
+          "id": "test-17-59",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9370887875556946
+        },
+        {
+          "id": "test-17-60",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.926473081111908
+        },
+        {
+          "id": "test-17-61",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5500231981277466
+        },
+        {
+          "id": "test-17-62",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8707531094551086
+        },
+        {
+          "id": "test-17-63",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9079717993736267
+        },
+        {
+          "id": "test-17-64",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9365500807762146
+        },
+        {
+          "id": "test-17-65",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5539981722831726
+        },
+        {
+          "id": "test-17-66",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8714610934257507
+        },
+        {
+          "id": "test-17-67",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.886311411857605
+        },
+        {
+          "id": "test-17-68",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9407185912132263
+        },
+        {
+          "id": "test-17-69",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5575661063194275
+        },
+        {
+          "id": "test-17-70",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7227388620376587
+        },
+        {
+          "id": "test-17-71",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8863922357559204
+        },
+        {
+          "id": "test-17-72",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261666536331177
+        },
+        {
+          "id": "test-17-73",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8445723652839661
+        },
+        {
+          "id": "test-17-74",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8707531094551086
+        },
+        {
+          "id": "test-17-75",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9418901205062866
+        },
+        {
+          "id": "test-17-76",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9407185912132263
+        },
+        {
+          "id": "test-17-77",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5539981722831726
+        },
+        {
+          "id": "test-17-78",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8896788954734802
+        },
+        {
+          "id": "test-17-79",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9079626798629761
+        },
+        {
+          "id": "test-17-80",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9069032073020935
+        },
+        {
+          "id": "test-17-81",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5511427521705627
+        },
+        {
+          "id": "test-17-82",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869151771068573
+        },
+        {
+          "id": "test-17-83",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8897154927253723
+        },
+        {
+          "id": "test-17-84",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.926473081111908
+        },
+        {
+          "id": "test-17-85",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8445723652839661
+        },
+        {
+          "id": "test-17-86",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8714610934257507
+        },
+        {
+          "id": "test-17-87",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9485026597976685
+        },
+        {
+          "id": "test-17-88",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9069032073020935
+        },
+        {
+          "id": "test-17-89",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.843781054019928
+        },
+        {
+          "id": "test-17-90",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869151771068573
+        },
+        {
+          "id": "test-17-91",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9286782145500183
+        },
+        {
+          "id": "test-17-92",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9073417782783508
+        },
+        {
+          "id": "test-17-93",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5539981722831726
+        },
+        {
+          "id": "test-17-94",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7227388620376587
+        },
+        {
+          "id": "test-17-95",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9079672694206238
+        },
+        {
+          "id": "test-17-96",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261844158172607
+        },
+        {
+          "id": "test-17-97",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5511427521705627
+        },
+        {
+          "id": "test-17-98",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8707531094551086
+        },
+        {
+          "id": "test-17-99",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9484251737594604
+        },
+        {
+          "id": "test-17-100",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9073417782783508
+        },
+        {
+          "id": "test-17-101",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5545396208763123
+        },
+        {
+          "id": "test-17-102",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8714610934257507
+        },
+        {
+          "id": "test-17-103",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9420151114463806
+        },
+        {
+          "id": "test-17-104",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9069032073020935
+        },
+        {
+          "id": "test-17-105",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8827211856842041
+        },
+        {
+          "id": "test-17-106",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8707531094551086
+        },
+        {
+          "id": "test-17-107",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9419047236442566
+        },
+        {
+          "id": "test-17-108",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.926473081111908
+        },
+        {
+          "id": "test-17-109",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5575661063194275
+        },
+        {
+          "id": "test-17-110",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8714610934257507
+        },
+        {
+          "id": "test-17-111",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8863007426261902
+        },
+        {
+          "id": "test-17-112",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9069317579269409
+        },
+        {
+          "id": "test-17-113",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8938297033309937
+        },
+        {
+          "id": "test-17-114",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8700858950614929
+        },
+        {
+          "id": "test-17-115",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9418901205062866
+        },
+        {
+          "id": "test-17-116",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261666536331177
+        },
+        {
+          "id": "test-17-117",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.6971743106842041
+        },
+        {
+          "id": "test-17-118",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8701691627502441
+        },
+        {
+          "id": "test-17-119",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9418901205062866
+        },
+        {
+          "id": "test-17-120",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9073417782783508
+        },
+        {
+          "id": "test-17-121",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8445723652839661
+        },
+        {
+          "id": "test-17-122",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8701691627502441
+        },
+        {
+          "id": "test-17-123",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9485026597976685
+        },
+        {
+          "id": "test-17-124",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261844158172607
+        },
+        {
+          "id": "test-17-125",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8827211856842041
+        },
+        {
+          "id": "test-17-126",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8714610934257507
+        },
+        {
+          "id": "test-17-127",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9485203623771667
+        },
+        {
+          "id": "test-17-128",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261666536331177
+        },
+        {
+          "id": "test-17-129",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.6971743106842041
+        },
+        {
+          "id": "test-17-130",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8896788954734802
+        },
+        {
+          "id": "test-17-131",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.908006489276886
+        },
+        {
+          "id": "test-17-132",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261844158172607
+        },
+        {
+          "id": "test-17-133",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8928723335266113
+        },
+        {
+          "id": "test-17-134",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8700858950614929
+        },
+        {
+          "id": "test-17-135",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9416998028755188
+        },
+        {
+          "id": "test-17-136",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261666536331177
+        },
+        {
+          "id": "test-17-137",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.7228496670722961
+        },
+        {
+          "id": "test-17-138",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.869151771068573
+        },
+        {
+          "id": "test-17-139",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.8895825743675232
+        },
+        {
+          "id": "test-17-140",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9069032073020935
+        },
+        {
+          "id": "test-17-141",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.7077338099479675
+        },
+        {
+          "id": "test-17-142",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8707531094551086
+        },
+        {
+          "id": "test-17-143",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9420295357704163
+        },
+        {
+          "id": "test-17-144",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9407185912132263
+        },
+        {
+          "id": "test-17-145",
+          "truth": "quantity",
+          "predicted": "settlement",
+          "confidence": 0.8438412547111511
+        },
+        {
+          "id": "test-17-146",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8714610934257507
+        },
+        {
+          "id": "test-17-147",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9370887875556946
+        },
+        {
+          "id": "test-17-148",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9261666536331177
+        },
+        {
+          "id": "test-17-149",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5511427521705627
+        },
+        {
+          "id": "test-17-150",
+          "truth": "settlement",
+          "predicted": "settlement",
+          "confidence": 0.8896788954734802
+        },
+        {
+          "id": "test-17-151",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9420295357704163
+        },
+        {
+          "id": "test-17-152",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9069317579269409
+        },
+        {
+          "id": "test-17-153",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.5511427521705627
+        },
+        {
+          "id": "test-17-154",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.8700858950614929
+        },
+        {
+          "id": "test-17-155",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9370887875556946
+        },
+        {
+          "id": "test-17-156",
+          "truth": "matched",
+          "predicted": "matched",
+          "confidence": 0.9365500807762146
+        },
+        {
+          "id": "test-17-157",
+          "truth": "quantity",
+          "predicted": "quantity",
+          "confidence": 0.8928723335266113
+        },
+        {
+          "id": "test-17-158",
+          "truth": "settlement",
+          "predicted": "quantity",
+          "confidence": 0.7227388620376587
+        },
+        {
+          "id": "test-17-159",
+          "truth": "escalate",
+          "predicted": "escalate",
+          "confidence": 0.9370887875556946
+        }
+      ]
+    }
+  }
+}

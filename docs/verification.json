@@ -1,0 +1,11 @@
+{
+  "verified_at_utc": "2026-10-06T01:19:02.029300+00:00",
+  "python": "3.12",
+  "project_tests_passed": 5,
+  "aggregate_tests_passed": 45,
+  "aggregate_skipped": 0,
+  "lint": "passed",
+  "local_command": "pytest tests -q (with optional local integrations enabled as described in README)",
+  "ci_note": "GitHub Actions runs portable tests; local optional integrations were separately exercised.",
+  "experiments": "v2 fixed protocol with seeds 17, 29, 41; real CPU training, fine-tuning, distillation, and serialization measurements."
+}
