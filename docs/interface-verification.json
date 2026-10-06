@@ -1,0 +1,170 @@
+{
+  "release": "0.2.1",
+  "scope": "Interface styling and navigation semantics; business logic unchanged",
+  "viewports": [
+    320,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "responsive_views": [
+    {
+      "project": "small-model-lab",
+      "width": 1440,
+      "tab": "classify",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 1440,
+      "tab": "study",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 1440,
+      "tab": "training",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 1440,
+      "tab": "protocol",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 1024,
+      "tab": "classify",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 1024,
+      "tab": "study",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 1024,
+      "tab": "training",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 1024,
+      "tab": "protocol",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 768,
+      "tab": "classify",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 768,
+      "tab": "study",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 768,
+      "tab": "training",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 768,
+      "tab": "protocol",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 390,
+      "tab": "classify",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 390,
+      "tab": "study",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 390,
+      "tab": "training",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 390,
+      "tab": "protocol",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 320,
+      "tab": "classify",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 320,
+      "tab": "study",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 320,
+      "tab": "training",
+      "overflow": false,
+      "aria_current": true
+    },
+    {
+      "project": "small-model-lab",
+      "width": 320,
+      "tab": "protocol",
+      "overflow": false,
+      "aria_current": true
+    }
+  ],
+  "workflow": {
+    "project": "small-model-lab",
+    "tabs": [
+      "classify",
+      "study",
+      "training",
+      "protocol"
+    ],
+    "workflow": "passed",
+    "javascript_errors": []
+  },
+  "javascript_syntax": "passed",
+  "keyboard_skip_link": "passed",
+  "screenshots": [
+    "screenshot.png",
+    "mobile.png"
+  ]
+}

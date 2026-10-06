@@ -23,7 +23,7 @@ async function classify() {
     r = study.seeds["17"].models.distilled_student;
   $("#main").innerHTML =
     heading(
-      "A small model with a measurable job.",
+      "Small model. Real predictions.",
       "Classify banking support requests into 77 intents, with an explicit route to human review.",
     ) +
     `<div class="stats">${stat("Model parameters", fmt(r.parameters), "Mean-pooling student · 48-wide embeddings")}${stat("Test accuracy", pct(r.test.accuracy), "Release seed · 3,080 official test queries")}${stat("Review threshold", fmt(r.test.threshold, 3), "Chosen using validation data")}${stat("Runtime", m.ready ? (m.quantized ? "INT8" : "Float32") : "Not loaded", m.ready ? "Local CPU inference" : "Load the release artifact")}</div><div class="split"><section class="card"><h2>Try a support request</h2><label for="text">One request per line</label><textarea id="text" style="min-height:160px">My card still hasn't arrived after two weeks.
