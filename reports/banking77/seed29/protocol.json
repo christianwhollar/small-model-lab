@@ -1,0 +1,47 @@
+{
+  "config": {
+    "seed": 29,
+    "epochs": 10,
+    "student_epochs": 20,
+    "device": "mps",
+    "model": "prajjwal1/bert-tiny",
+    "model_revision": "6f75de8b60a9f8a2fdf7b69cbd86d9e64bcb3837",
+    "max_length": 64,
+    "teacher_lr": 0.0003,
+    "lora_lr": 0.001,
+    "student_lr": 0.003,
+    "distillation_temperature": 2,
+    "distillation_alpha": 0.5,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_targets": [
+      "query",
+      "value"
+    ],
+    "selection": "maximum validation accuracy; earliest tie",
+    "torch": "2.14.1",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "study": "BANKING77 exploratory v1"
+  },
+  "data": {
+    "dataset": "BANKING77",
+    "revision": "57ec275d8078af65b7731c2a98be812d844a6d6b",
+    "sha256": {
+      "train": "b06e26ac675513959a63135f11b94ea7786ed02da65db93a5650d8838cbc664b",
+      "test": "d12d6e3bc4c3103966ae786dc435913c0c563dfa328f5a3646d0e62cfeeb474d"
+    },
+    "license": "CC-BY-4.0",
+    "normalized_duplicates_removed_from_train": 56,
+    "counts": {
+      "train": 8454,
+      "validation": 1493,
+      "test": 3080
+    },
+    "split_seed": 29,
+    "split_hashes": {
+      "train": "d58edd012a9020f1fbb85101dd27a87e0af9cd8403da7b7623fefc0b70612fa9",
+      "validation": "642333ebcbc75280943acc6333bce8bb3984908153d83b90aa48901f5bdd16cf",
+      "test": "f74066ecffd34df795e2d326b347f0cfd87056debed306e72f16c2acb57b5943"
+    }
+  }
+}

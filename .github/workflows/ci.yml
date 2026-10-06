@@ -14,4 +14,8 @@ jobs:
       - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
       - run: pip install -c constraints.txt -e '.[dev]'
       - run: ruff check src tests scripts
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python scripts/check_web.py
       - run: pytest -q
